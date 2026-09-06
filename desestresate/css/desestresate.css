@@ -1,0 +1,794 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --azul: #315b73;
+    --azul-oscuro: #244456;
+    --azul-claro: #e8f1f4;
+
+    --verde: #668f80;
+    --verde-claro: #edf4f0;
+
+    --amarillo: #d8a84e;
+    --amarillo-claro: #faf3df;
+
+    --texto: #29343a;
+    --texto-suave: #68747a;
+
+    --blanco: #ffffff;
+    --fondo: #f8f7f3;
+
+    --borde: #e2e3df;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: var(--texto);
+
+    background: var(--fondo);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar-neuro {
+    background: var(--blanco);
+
+    border-bottom: 1px solid var(--borde);
+
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--azul-oscuro);
+
+    font-size: 1.45rem;
+
+    font-weight: 700;
+}
+
+.navbar-brand:hover {
+    color: var(--azul-oscuro);
+}
+
+.logo-neuro {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--azul);
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #566168;
+
+    font-size: 1.05rem;
+
+    margin-left: 18px;
+
+    padding: 8px 4px !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--amarillo);
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+    padding: 65px 0;
+
+    background: var(--amarillo-claro);
+}
+
+.encabezado-contenido {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    max-width: 850px;
+}
+
+.encabezado-icono {
+    flex-shrink: 0;
+
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: var(--blanco);
+
+    color: var(--amarillo);
+
+    font-size: 2.3rem;
+}
+
+.etiqueta {
+    color: #9b762e;
+
+    font-size: .85rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.encabezado h1 {
+    margin: 7px 0 17px;
+
+    color: var(--azul-oscuro);
+
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+
+    line-height: 1.15;
+
+    font-weight: 700;
+}
+
+.encabezado h1 span {
+    color: var(--amarillo);
+}
+
+.encabezado p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: var(--texto-suave);
+
+    font-size: 1.15rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.titulo-seccion {
+    margin-bottom: 40px;
+}
+
+.titulo-seccion span {
+    color: var(--amarillo);
+
+    font-size: .82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.titulo-seccion h2 {
+    margin: 8px 0 10px;
+
+    color: var(--azul-oscuro);
+
+    font-size: 2rem;
+
+    font-weight: 700;
+}
+
+.titulo-seccion p {
+    margin: 0;
+
+    color: var(--texto-suave);
+
+    font-size: 1rem;
+}
+
+
+/* =========================
+   RESPIRACIÓN
+========================= */
+
+.respiracion {
+    padding: 75px 0;
+
+    background: var(--fondo);
+}
+
+.respiracion-contenido {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 70px;
+}
+
+
+/* Círculo */
+
+.circulo-respiracion {
+    width: 220px;
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--azul-claro);
+
+    border: 2px solid #d5e3e8;
+
+    transition: transform 4s ease-in-out;
+}
+
+.circulo-respiracion.activo {
+    animation: respiracion 8s infinite ease-in-out;
+}
+
+@keyframes respiracion {
+
+    0% {
+        transform: scale(.75);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(.75);
+    }
+
+}
+
+.circulo-interior {
+    width: 145px;
+    height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 50%;
+
+    background: var(--blanco);
+
+    box-shadow: 0 7px 20px rgba(0, 0, 0, .06);
+}
+
+.circulo-interior span {
+    color: var(--azul);
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+}
+
+
+/* Instrucciones */
+
+.respiracion-instrucciones {
+    max-width: 360px;
+}
+
+.respiracion-instrucciones p {
+    margin-bottom: 20px;
+
+    color: var(--texto-suave);
+
+    font-size: 1.05rem;
+
+    line-height: 1.6;
+}
+
+.boton-respirar {
+    border: none;
+
+    padding: 12px 23px;
+
+    border-radius: 7px;
+
+    background: var(--azul);
+
+    color: var(--blanco);
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.boton-respirar:hover {
+    background: var(--azul-oscuro);
+}
+
+
+/* =========================
+   ACTIVIDADES
+========================= */
+
+.actividades {
+    padding: 75px 0;
+
+    background: var(--blanco);
+}
+
+.actividad {
+    height: 100%;
+
+    padding: 30px;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 10px;
+
+    background: var(--fondo);
+}
+
+.actividad-icono {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 9px;
+}
+
+.actividad-icono i {
+    font-size: 1.8rem;
+}
+
+.relajacion {
+    background: var(--verde-claro);
+    color: var(--verde);
+}
+
+.musica {
+    background: var(--amarillo-claro);
+    color: var(--amarillo);
+}
+
+.mente {
+    background: var(--azul-claro);
+    color: var(--azul);
+}
+
+.actividad h3 {
+    margin-bottom: 12px;
+
+    color: var(--azul-oscuro);
+
+    font-size: 1.35rem;
+}
+
+.actividad > p {
+    margin-bottom: 20px;
+
+    color: var(--texto-suave);
+
+    line-height: 1.6;
+}
+
+.actividad-paso {
+    padding: 7px 0;
+
+    color: var(--texto-suave);
+
+    font-size: .95rem;
+}
+
+.actividad-paso strong {
+    color: var(--azul);
+}
+
+
+/* =========================
+   BOTÓN JUEGO
+========================= */
+
+.boton-juego {
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 7px;
+
+    background: var(--azul);
+
+    color: white;
+
+    font-size: .95rem;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.boton-juego:hover {
+    background: var(--azul-oscuro);
+}
+
+.boton-juego i {
+    margin-left: 5px;
+}
+
+
+/* =========================
+   JUEGO
+========================= */
+
+.juego {
+    display: none;
+
+    padding: 65px 0;
+
+    background: var(--azul-claro);
+}
+
+.juego.visible {
+    display: block;
+}
+
+.juego-contenido {
+    max-width: 650px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.juego-contenido > span {
+    color: var(--azul);
+
+    font-size: .8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.juego-contenido h2 {
+    margin: 8px 0 10px;
+
+    color: var(--azul-oscuro);
+
+    font-size: 1.8rem;
+}
+
+.juego-contenido > p {
+    color: var(--texto-suave);
+
+    line-height: 1.6;
+}
+
+.numero-juego {
+    margin: 25px auto;
+
+    font-size: 2.4rem;
+
+    color: var(--azul-oscuro);
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+}
+
+.campo-respuesta {
+    width: 220px;
+
+    padding: 11px 14px;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 7px;
+
+    text-align: center;
+
+    font-size: 1rem;
+
+    outline: none;
+}
+
+.campo-respuesta:focus {
+    border-color: var(--azul);
+}
+
+.comprobar {
+    margin-top: 15px;
+}
+
+.resultado-juego {
+    min-height: 25px;
+
+    margin-top: 15px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   MOMENTO
+========================= */
+
+.momento {
+    padding: 65px 0;
+
+    background: var(--verde-claro);
+}
+
+.momento-contenido {
+    max-width: 700px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.momento-contenido > i {
+    color: var(--verde);
+
+    font-size: 2.2rem;
+}
+
+.momento-contenido p {
+    margin: 20px 0 10px;
+
+    color: var(--azul-oscuro);
+
+    font-size: 1.45rem;
+
+    line-height: 1.5;
+}
+
+.momento-contenido span {
+    color: var(--texto-suave);
+
+    font-size: .9rem;
+}
+
+
+/* =========================
+   VOLVER
+========================= */
+
+.volver {
+    padding: 50px 0;
+}
+
+.volver p {
+    margin-bottom: 18px;
+
+    color: var(--texto-suave);
+}
+
+.boton-volver {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 12px 22px;
+
+    border: 1px solid var(--azul);
+
+    border-radius: 7px;
+
+    background: var(--blanco);
+
+    color: var(--azul);
+
+    transition: .2s ease;
+}
+
+.boton-volver:hover {
+    background: var(--azul);
+
+    color: var(--blanco);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-neuro {
+    padding: 28px 0;
+
+    background: var(--azul-oscuro);
+
+    color: white;
+}
+
+.footer-contenido {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-contenido strong {
+    font-size: 1.15rem;
+}
+
+.footer-contenido p {
+    margin: 5px 0 0;
+
+    color: #d6dfe3;
+
+    font-size: .9rem;
+}
+
+.footer-contenido .copyright {
+    margin: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+    .nav-link {
+        margin-left: 0;
+
+        padding: 10px 0 !important;
+    }
+
+    .respiracion-contenido {
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 767px) {
+
+    .navbar-neuro {
+        padding: 12px 0;
+    }
+
+    .encabezado {
+        padding: 45px 0;
+    }
+
+    .encabezado-contenido {
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+    .encabezado-icono {
+        width: 58px;
+        height: 58px;
+
+        font-size: 1.8rem;
+    }
+
+    .encabezado h1 {
+        font-size: 2.2rem;
+    }
+
+    .encabezado p {
+        font-size: 1.05rem;
+    }
+
+    .respiracion {
+        padding: 55px 0;
+    }
+
+    .respiracion-contenido {
+        flex-direction: column;
+
+        gap: 35px;
+
+        text-align: center;
+    }
+
+    .circulo-respiracion {
+        width: 190px;
+        height: 190px;
+    }
+
+    .circulo-interior {
+        width: 125px;
+        height: 125px;
+    }
+
+    .circulo-interior span {
+        font-size: 1rem;
+    }
+
+    .respiracion-instrucciones {
+        max-width: 100%;
+    }
+
+    .actividades {
+        padding: 55px 0;
+    }
+
+    .actividad {
+        padding: 25px;
+    }
+
+    .juego {
+        padding: 50px 0;
+    }
+
+    .juego-contenido h2 {
+        font-size: 1.5rem;
+    }
+
+    .numero-juego {
+        font-size: 2rem;
+    }
+
+    .momento {
+        padding: 50px 0;
+    }
+
+    .momento-contenido p {
+        font-size: 1.25rem;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
