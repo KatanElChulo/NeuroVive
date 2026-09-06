@@ -1,0 +1,480 @@
+
+/* ===========================
+   COLORES
+=========================== */
+
+:root {
+    --azul: #315b72;
+    --azul-oscuro: #243f50;
+
+    --verde: #5b876d;
+    --verde-claro: #e7efe9;
+
+    --amarillo: #c99b3b;
+    --amarillo-claro: #f5edda;
+
+    --fondo: #f5f3ee;
+    --blanco: #ffffff;
+
+    --texto: #4c5357;
+}
+
+
+/* ===========================
+   GENERAL
+=========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--texto);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ===========================
+   MENÚ
+=========================== */
+
+.menu {
+    background-color: var(--blanco);
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #dedbd4;
+}
+
+.navbar-brand {
+    color: var(--azul-oscuro);
+
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+.navbar-brand i {
+    margin-right: 7px;
+    color: var(--verde);
+}
+
+.nav-link {
+    color: var(--texto);
+
+    margin-left: 20px;
+
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    color: var(--azul);
+}
+
+
+/* ===========================
+   INICIO
+=========================== */
+
+.inicio {
+    padding: 100px 0;
+
+    background-color: var(--fondo);
+
+    border-bottom: 1px solid #ddd9d0;
+}
+
+.pequeno-titulo {
+    color: var(--verde);
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.inicio h1 {
+    color: var(--azul-oscuro);
+
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.inicio h1 span {
+    color: var(--verde);
+}
+
+.texto-inicio {
+    max-width: 650px;
+
+    font-size: 1.2rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.boton-inicio {
+    display: inline-block;
+
+    background-color: var(--azul);
+
+    color: white;
+
+    padding: 14px 23px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+}
+
+.boton-inicio i {
+    margin-left: 8px;
+}
+
+.boton-inicio:hover {
+    background-color: var(--azul-oscuro);
+
+    color: white;
+}
+
+
+/* ===========================
+   DECORACIÓN
+=========================== */
+
+.decoracion-inicio {
+    margin-left: 40px;
+
+    padding: 55px 35px;
+
+    background-color: var(--verde-claro);
+
+    border-left: 7px solid var(--verde);
+}
+
+.decoracion-inicio i {
+    font-size: 3.5rem;
+
+    color: var(--verde);
+}
+
+.decoracion-inicio p {
+    margin-top: 20px;
+
+    color: var(--azul-oscuro);
+
+    font-size: 1.3rem;
+
+    font-weight: bold;
+
+    line-height: 1.5;
+}
+
+
+/* ===========================
+   SECCIONES
+=========================== */
+
+.secciones {
+    padding: 90px 0;
+
+    background-color: var(--blanco);
+}
+
+.titulo {
+    margin-bottom: 45px;
+}
+
+.titulo p {
+    margin: 0 0 5px;
+
+    color: var(--verde);
+
+    font-weight: bold;
+}
+
+.titulo h2 {
+    margin: 0;
+
+    color: var(--azul-oscuro);
+
+    font-size: 2.4rem;
+}
+
+
+/* ===========================
+   OPCIONES
+=========================== */
+
+.opcion {
+    position: relative;
+
+    display: block;
+
+    min-height: 350px;
+
+    padding: 35px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    color: var(--texto);
+
+    transition: 0.2s;
+}
+
+.opcion:hover {
+    transform: translateY(-4px);
+
+    color: var(--texto);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Número */
+
+.numero {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    opacity: 0.5;
+}
+
+
+/* Icono */
+
+.icono {
+    display: block;
+
+    margin-top: 35px;
+    margin-bottom: 25px;
+
+    font-size: 3rem;
+}
+
+
+/* Título */
+
+.opcion h3 {
+    margin-bottom: 15px;
+
+    color: var(--azul-oscuro);
+
+    font-size: 2rem;
+}
+
+
+/* Texto */
+
+.opcion p {
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* Link */
+
+.opcion span {
+    font-weight: bold;
+}
+
+
+/* ===========================
+   COLORES DE OPCIONES
+=========================== */
+
+.opcion-verde {
+    border-top: 6px solid var(--verde);
+}
+
+.opcion-verde .icono,
+.opcion-verde span {
+    color: var(--verde);
+}
+
+.opcion-azul {
+    border-top: 6px solid var(--azul);
+}
+
+.opcion-azul .icono,
+.opcion-azul span {
+    color: var(--azul);
+}
+
+.opcion-amarillo {
+    border-top: 6px solid var(--amarillo);
+}
+
+.opcion-amarillo .icono,
+.opcion-amarillo span {
+    color: var(--amarillo);
+}
+
+
+/* ===========================
+   INFORMACIÓN
+=========================== */
+
+.informacion {
+    padding: 80px 0;
+
+    background-color: var(--fondo);
+}
+
+.informacion h2 {
+    color: var(--azul-oscuro);
+
+    font-size: 2.4rem;
+
+    max-width: 400px;
+}
+
+.informacion p {
+    line-height: 1.7;
+
+    max-width: 650px;
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer {
+    padding: 30px 0;
+
+    background-color: var(--azul-oscuro);
+
+    color: #e9eeee;
+}
+
+.footer strong {
+    font-size: 1.1rem;
+}
+
+.footer i {
+    color: #9db9a7;
+
+    margin-right: 5px;
+}
+
+
+/* ===========================
+   CELULAR
+=========================== */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 17px;
+    }
+
+    .menu {
+        padding: 12px 0;
+    }
+
+    .nav-link {
+        margin-left: 0;
+
+        padding: 10px 0;
+    }
+
+    .inicio {
+        padding: 70px 20px;
+    }
+
+    .inicio h1 {
+        font-size: 3rem;
+    }
+
+    .texto-inicio {
+        font-size: 1.05rem;
+    }
+
+    .boton-inicio {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .secciones {
+        padding: 70px 20px;
+    }
+
+    .titulo h2 {
+        font-size: 2rem;
+    }
+
+    .opcion {
+        min-height: auto;
+
+        padding: 30px;
+    }
+
+    .informacion {
+        padding: 65px 20px;
+    }
+
+    .informacion h2 {
+        margin-bottom: 30px;
+
+        font-size: 2rem;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer .text-md-end {
+        margin-top: 15px;
+
+        text-align: center !important;
+    }
+}
+
+
+/* ===========================
+   CELULAR PEQUEÑO
+=========================== */
+
+@media (max-width: 480px) {
+
+    .inicio h1 {
+        font-size: 2.6rem;
+    }
+
+    .opcion h3 {
+        font-size: 1.8rem;
+    }
+
+    .icono {
+        font-size: 2.7rem;
+    }
+
+}
+```
+

@@ -1,0 +1,14 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBorder": "#7bbd47",
+        "activityBarTop.activeBorder": "#7bbd47",
+        "statusBarItem.activeBackground": "#aaaf74",
+        "commandCenter.background": "#79802e",
+        "commandCenter.activeBackground": "#8d934e",
+        "commandCenter.activeForeground": "#f4f4f4",
+        "commandCenter.activeBorder": "#f4f4f44d",
+        "commandCenter.inactiveForeground": "#c9cbaf",
+        "commandCenter.inactiveBorder": "#f4f4f41f",
+        "commandCenter.inactiveBackground": "#80873a"
+    }
+}
