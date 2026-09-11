@@ -1,127 +1,188 @@
-
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NeuroVive</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NeuroVive | Tu bienestar importa</title>
+
 
     <!-- Bootstrap -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
-    <!-- Iconos Bootstrap -->
-    <link 
-        rel="stylesheet" 
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     >
 
     <!-- CSS propio -->
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-neuro">
-        <div class="container">
 
-            <a class="navbar-brand" href="index.html">
-                <span class="logo-neuro">N</span>
+    <!-- =================================
+         NAVBAR
+    ================================== -->
+
+    <header class="navbar-neuro">
+
+        <div class="container navbar-contenido">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="assets//img/NeuroViveLogo.png"
+                    alt="Logo de NeuroVive"
+                >
+
                 <span>NeuroVive</span>
+
             </a>
 
-            <button 
-                class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal"
-                aria-expanded="false"
-                aria-label="Abrir menú"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav ms-auto">
+            <nav>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">
-                            Inicio
-                        </a>
-                    </li>
+                <a href="#inicio">
+                    Inicio
+                </a>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="cuidate/cuidate.html">
-                            Cuídate
-                        </a>
-                    </li>
+                <a href="#apartados">
+                    Explorar
+                </a>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="informate/informate.html">
-                            Infórmate
-                        </a>
-                    </li>
+                <a href="#ayuda">
+                    Ayuda
+                </a>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="desestresate/desestresate.html">
-                            Desestrésate
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
+            </nav>
 
         </div>
-    </nav>
+
+    </header>
 
 
-    <!-- PRESENTACIÓN -->
+
+    <!-- =================================
+         CONTENIDO
+    ================================== -->
+
     <main>
 
-        <section class="bienvenida">
+
+        <!-- =================================
+             HERO
+        ================================== -->
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
             <div class="container">
 
-                <div class="row align-items-center">
+                <div class="hero-contenido">
+
 
                     <!-- TEXTO -->
-                    <div class="col-lg-6">
 
-                        <p class="texto-pequeno">
-                            Bienvenido a NeuroVive
-                        </p>
+                    <div class="hero-texto">
+
+                        <span class="etiqueta">
+
+                            Un espacio pensado para ti
+
+                        </span>
+
 
                         <h1>
-                            Cuidar tu mente también es
-                            <span>cuidar de ti.</span>
+
+                            Bienvenido a
+                            <strong>NeuroVive</strong>
+
                         </h1>
 
-                        <p class="descripcion">
-                            Un espacio pensado para ayudarte a mantener
-                            una vida activa, informarte y encontrar momentos
-                            de tranquilidad en tu día a día.
+
+                        <p>
+
+                            Un espacio para informarte, realizar
+                            actividades, conocer tus derechos y
+                            encontrar orientación para cuidar
+                            tu bienestar.
+
                         </p>
+
+
+                        <div class="pregunta">
+
+                            <i class="bi bi-chat-heart"></i>
+
+                            <span>
+                                ¿Qué necesitas hoy?
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#apartados"
+                            class="btn-principal"
+                        >
+
+                            Explorar NeuroVive
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
 
                     </div>
 
 
-                    <!-- ILUSTRACIÓN / ESPACIO VISUAL -->
-                    <div class="col-lg-6">
 
-                        <div class="figura-bienvenida">
+                    <!-- DECORACIÓN -->
 
-                            <div class="circulo-icono">
-                                <i class="bi bi-brain"></i>
-                            </div>
+                    <div class="hero-decoracion">
 
-                            <div class="mensaje-figura">
-                                <strong>Tu bienestar importa</strong>
-                                <span>Todos los días cuentan.</span>
-                            </div>
+                        <div class="circulo-grande">
+
+                            <i class="bi bi-flower1"></i>
+
+                        </div>
+
+
+                        <div class="decoracion decoracion-1">
+
+                            <i class="bi bi-heart"></i>
+
+                        </div>
+
+
+                        <div class="decoracion decoracion-2">
+
+                            <i class="bi bi-stars"></i>
+
+                        </div>
+
+
+                        <div class="decoracion decoracion-3">
+
+                            <i class="bi bi-chat-heart"></i>
 
                         </div>
 
@@ -130,45 +191,98 @@
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- OPCIONES -->
-        <section class="opciones">
+
+        <!-- =================================
+             APARTADOS
+        ================================== -->
+
+        <section
+            class="apartados"
+            id="apartados"
+        >
 
             <div class="container">
 
+
+                <!-- TÍTULO -->
+
                 <div class="titulo-seccion">
-                    <p>¿Qué quieres hacer hoy?</p>
+
+                    <span class="subtitulo">
+
+                        Encuentra lo que necesitas
+
+                    </span>
+
 
                     <h2>
-                        Explora NeuroVive
+
+                        Explora
+                        <span>NeuroVive</span>
+
                     </h2>
+
+
+                    <p>
+
+                        Elige un espacio para encontrar
+                        información, actividades y orientación.
+
+                    </p>
+
                 </div>
 
 
-                <div class="row g-4 justify-content-center">
 
-                    <!-- CUÍDATE -->
-                    <div class="col-md-4">
+                <!-- =================================
+                     TARJETAS
+                ================================== -->
 
-                        <a href="cuidate/cuidate.html" class="opcion-card opcion-cuidate">
+                <div class="row g-4">
 
-                            <div class="icono-opcion">
-                                <i class="bi bi-heart-pulse"></i>
+
+                    <!-- 1. MENTE EN EQUILIBRIO -->
+
+                    <div class="col-12 col-md-6 col-lg-3">
+
+                        <a
+                            href="cuidate/"
+                            class="tarjeta"
+                        >
+
+                            <div class="icono tarjeta-azul">
+
+                                <i class="bi bi-brain"></i>
+
                             </div>
 
-                            <div>
-                                <h3>Cuídate</h3>
+
+                            <div class="tarjeta-contenido">
+
+                                <h3>
+                                    Mente en Equilibrio
+                                </h3>
 
                                 <p>
-                                    Encuentra consejos y actividades
-                                    para cuidar tu bienestar.
+
+                                    Información sobre emociones,
+                                    estrés, ansiedad, soledad,
+                                    autoestima, duelo y relaciones
+                                    sociales.
+
                                 </p>
+
                             </div>
 
+
                             <span class="flecha">
+
                                 <i class="bi bi-arrow-right"></i>
+
                             </span>
 
                         </a>
@@ -176,26 +290,45 @@
                     </div>
 
 
-                    <!-- INFÓRMATE -->
-                    <div class="col-md-4">
 
-                        <a href="informate/informate.html" class="opcion-card opcion-informate">
+                    <!-- 2. ACTIVA TU BIENESTAR -->
 
-                            <div class="icono-opcion">
-                                <i class="bi bi-lightbulb"></i>
+                    <div class="col-12 col-md-6 col-lg-3">
+
+                        <a
+                            href="desestresate/"
+                            class="tarjeta"
+                        >
+
+                            <div class="icono tarjeta-verde">
+
+                                <i class="bi bi-flower1"></i>
+
                             </div>
 
-                            <div>
-                                <h3>Infórmate</h3>
+
+                            <div class="tarjeta-contenido">
+
+                                <h3>
+                                    Activa tu Bienestar
+                                </h3>
 
                                 <p>
-                                    Aprende de manera sencilla sobre
-                                    temas importantes para tu bienestar.
+
+                                    Juegos de memoria,
+                                    relajación, respiración,
+                                    lectura, música y actividades
+                                    creativas y sociales.
+
                                 </p>
+
                             </div>
 
+
                             <span class="flecha">
+
                                 <i class="bi bi-arrow-right"></i>
+
                             </span>
 
                         </a>
@@ -203,29 +336,324 @@
                     </div>
 
 
-                    <!-- DESESTRÉSATE -->
-                    <div class="col-md-4">
 
-                        <a href="desestresate/desestresate.html" class="opcion-card opcion-desestresate">
+                    <!-- 3. CONOCE Y DEFIENDE -->
 
-                            <div class="icono-opcion">
-                                <i class="bi bi-cup-hot"></i>
+                    <div class="col-12 col-md-6 col-lg-3">
+
+                        <a
+                            href="informate/"
+                            class="tarjeta"
+                        >
+
+                            <div class="icono tarjeta-morado">
+
+                                <i class="bi bi-shield-check"></i>
+
                             </div>
 
-                            <div>
-                                <h3>Desestrésate</h3>
+
+                            <div class="tarjeta-contenido">
+
+                                <h3>
+                                    Conoce y Defiende
+                                </h3>
 
                                 <p>
-                                    Tómate un momento para relajarte
-                                    y disfrutar de actividades tranquilas.
+
+                                    Información sobre derechos,
+                                    salud, dignidad, igualdad,
+                                    testamento y representación.
+
                                 </p>
+
                             </div>
 
+
                             <span class="flecha">
+
                                 <i class="bi bi-arrow-right"></i>
+
                             </span>
 
                         </a>
+
+                    </div>
+
+
+
+                    <!-- 4. RUTA DE AYUDA -->
+
+                    <div class="col-12 col-md-6 col-lg-3">
+
+                        <a
+                            href="#"
+                            class="tarjeta"
+                        >
+
+                            <div class="icono tarjeta-naranja">
+
+                                <i class="bi bi-signpost-2"></i>
+
+                            </div>
+
+
+                            <div class="tarjeta-contenido">
+
+                                <h3>
+                                    Ruta de Ayuda
+                                </h3>
+
+                                <p>
+
+                                    Orientación para identificar
+                                    qué necesitas, dónde acudir
+                                    y qué pasos seguir.
+
+                                </p>
+
+                            </div>
+
+
+                            <span class="flecha">
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- 5. CONÓCETE -->
+
+                    <div class="col-12 col-md-6 col-lg-3">
+
+                        <a
+                            href="#"
+                            class="tarjeta"
+                        >
+
+                            <div class="icono tarjeta-rosa">
+
+                                <i class="bi bi-person-heart"></i>
+
+                            </div>
+
+
+                            <div class="tarjeta-contenido">
+
+                                <h3>
+                                    Conócete
+                                </h3>
+
+                                <p>
+
+                                    Un espacio orientativo para
+                                    identificar cómo te sientes y
+                                    encontrar contenidos pertinentes.
+
+                                </p>
+
+                            </div>
+
+
+                            <span class="flecha">
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- 6. NO ESTÁS SOLO -->
+
+                    <div class="col-12 col-md-6 col-lg-3">
+
+                        <a
+                            href="#"
+                            class="tarjeta"
+                        >
+
+                            <div class="icono tarjeta-celeste">
+
+                                <i class="bi bi-people"></i>
+
+                            </div>
+
+
+                            <div class="tarjeta-contenido">
+
+                                <h3>
+                                    No Estás Solo
+                                </h3>
+
+                                <p>
+
+                                    Familia, amigos, cuidadores
+                                    y redes de apoyo para fortalecer
+                                    los vínculos y pedir ayuda.
+
+                                </p>
+
+                            </div>
+
+
+                            <span class="flecha">
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- 7. NECESITO APOYO -->
+
+                    <div class="col-12 col-md-6 col-lg-3">
+
+                        <a
+                            href="#"
+                            class="tarjeta"
+                        >
+
+                            <div class="icono tarjeta-rojo">
+
+                                <i class="bi bi-hand-thumbs-up"></i>
+
+                            </div>
+
+
+                            <div class="tarjeta-contenido">
+
+                                <h3>
+                                    Necesito Apoyo
+                                </h3>
+
+                                <p>
+
+                                    Información sobre cuándo buscar
+                                    ayuda profesional, instituciones
+                                    y contactos oficiales.
+
+                                </p>
+
+                            </div>
+
+
+                            <span class="flecha">
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- 8. MI NEUROVIVE -->
+
+                    <div class="col-12 col-md-6 col-lg-3">
+
+                        <a
+                            href="index.html"
+                            class="tarjeta tarjeta-especial"
+                        >
+
+                            <div class="icono tarjeta-dorado">
+
+                                <i class="bi bi-house-heart"></i>
+
+                            </div>
+
+
+                            <div class="tarjeta-contenido">
+
+                                <h3>
+                                    Mi NeuroVive
+                                </h3>
+
+                                <p>
+
+                                    Regresa al inicio para explorar
+                                    nuevamente los diferentes espacios
+                                    de NeuroVive.
+
+                                </p>
+
+                            </div>
+
+
+                            <span class="flecha">
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             MENSAJE FINAL
+        ================================== -->
+
+        <section
+            class="seccion-ayuda"
+            id="ayuda"
+        >
+
+            <div class="container">
+
+                <div class="ayuda-contenido">
+
+
+                    <div class="ayuda-icono">
+
+                        <i class="bi bi-heart-pulse"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="subtitulo">
+                            Recuerda
+                        </span>
+
+
+                        <h2>
+                            Cuidar de ti también es importante
+                        </h2>
+
+
+                        <p>
+
+                            No tienes que resolver todo por tu cuenta.
+                            NeuroVive busca orientarte para que encuentres
+                            información y apoyo cuando lo necesites.
+
+                        </p>
 
                     </div>
 
@@ -238,23 +666,34 @@
     </main>
 
 
-    <!-- FOOTER -->
-    <footer class="footer-neuro">
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer>
 
         <div class="container">
 
             <div class="footer-contenido">
 
+
                 <div>
-                    <strong>NeuroVive</strong>
+
+                    <strong>
+                        NeuroVive
+                    </strong>
+
                     <p>
-                        Un espacio para cuidar, aprender y disfrutar.
+                        Información y orientación para tu bienestar.
                     </p>
+
                 </div>
 
-                <p class="copyright">
+
+                <span>
                     © 2026 NeuroVive
-                </p>
+                </span>
 
             </div>
 
@@ -263,11 +702,13 @@
     </footer>
 
 
+
     <!-- Bootstrap JS -->
-    <script 
+
+    <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
 
 </body>
-</html>
 
+</html>

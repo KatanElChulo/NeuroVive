@@ -1,38 +1,72 @@
-
-/* =========================
+/* =========================================
    VARIABLES
-========================= */
+========================================= */
 
 :root {
-    --azul: #315b73;
-    --azul-oscuro: #244456;
-    --azul-claro: #e8f1f4;
 
-    --verde: #668f80;
-    --verde-claro: #edf4f0;
+    --azul-oscuro: #17324d;
+    --azul: #3d7ea6;
+    --azul-claro: #e8f4f8;
 
-    --amarillo: #d8a84e;
-    --amarillo-claro: #faf3df;
+    --verde: #6b9b78;
+    --verde-claro: #edf5ef;
 
-    --texto: #29343a;
-    --texto-suave: #68747a;
+    --morado: #8073a8;
+    --morado-claro: #f1eff8;
+
+    --naranja: #d7965b;
+    --naranja-claro: #fbf1e7;
+
+    --rosa: #c9828d;
+    --rosa-claro: #faeef0;
+
+    --celeste: #5e9fb1;
+    --celeste-claro: #eaf5f7;
+
+    --rojo: #c76f6f;
+    --rojo-claro: #faeeee;
+
+    --dorado: #c29a55;
+    --dorado-claro: #faf4e7;
 
     --blanco: #ffffff;
-    --fondo: #f8f7f3;
 
-    --borde: #e2e3df;
+    --gris-fondo: #f7f9f8;
+    --gris-texto: #65717a;
+
+    --borde: #e5ebed;
+
+    --sombra:
+        0 8px 25px rgba(23, 50, 77, 0.08);
 }
 
 
-/* =========================
-   GENERAL
-========================= */
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--texto);
-    background: var(--fondo);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--gris-fondo);
+
+    color: var(--azul-oscuro);
+
+    line-height: 1.6;
 }
 
 a {
@@ -40,414 +74,956 @@ a {
 }
 
 
-/* =========================
+/* =========================================
    NAVBAR
-========================= */
+========================================= */
 
 .navbar-neuro {
+
     background: var(--blanco);
-    border-bottom: 1px solid var(--borde);
-    padding: 15px 0;
+
+    border-bottom:
+        1px solid var(--borde);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
 }
 
-.navbar-brand {
+.navbar-contenido {
+
+    min-height: 78px;
+
     display: flex;
+
     align-items: center;
-    gap: 10px;
+
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
 
     color: var(--azul-oscuro);
-    font-size: 1.45rem;
+
+    font-size: 1.5rem;
+
     font-weight: 700;
+
+    transition: 0.25s;
 }
 
-.navbar-brand:hover {
-    color: var(--azul-oscuro);
+.logo:hover {
+    color: var(--azul);
 }
 
-.logo-neuro {
-    width: 38px;
-    height: 38px;
+.logo img {
+
+    width: 48px;
+
+    height: 48px;
+
+    object-fit: contain;
+}
+
+
+/* MENU */
+
+.navbar-neuro nav {
 
     display: flex;
+
     align-items: center;
-    justify-content: center;
 
-    border-radius: 9px;
-
-    background: var(--azul);
-    color: white;
-
-    font-size: 1.2rem;
-    font-weight: bold;
+    gap: 32px;
 }
 
-.nav-link {
-    color: #566168;
-    font-size: 1.05rem;
-    margin-left: 18px;
-    padding: 8px 4px !important;
+.navbar-neuro nav a {
+
+    color: #53636d;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    transition: 0.25s;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.navbar-neuro nav a:hover {
     color: var(--azul);
 }
 
 
-/* =========================
-   BIENVENIDA
-========================= */
+/* =========================================
+   HERO
+========================================= */
 
-.bienvenida {
-    padding: 80px 0 75px;
-    background: var(--azul-claro);
+.hero {
+
+    background:
+        linear-gradient(
+            100deg,
+            #eef7f5 0%,
+            #f5f9f7 60%,
+            #eef5f8 100%
+        );
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
 }
 
-.texto-pequeno {
-    margin-bottom: 15px;
+.hero-contenido {
 
-    color: var(--azul);
-    font-size: 1.05rem;
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* TEXTO */
+
+.hero-texto {
+
+    max-width: 650px;
+}
+
+.etiqueta {
+
+    display: inline-block;
+
+    padding:
+        7px 15px;
+
+    background: var(--blanco);
+
+    color: var(--verde);
+
+    border-radius: 30px;
+
+    font-size: 0.9rem;
+
     font-weight: 700;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(23, 50, 77, 0.06);
 }
 
-.bienvenida h1 {
-    max-width: 600px;
+.hero h1 {
 
-    font-size: clamp(2.3rem, 4vw, 3.6rem);
+    font-size:
+        clamp(2.3rem, 5vw, 4rem);
+
     line-height: 1.15;
 
-    font-weight: 700;
-    margin-bottom: 25px;
+    font-weight: 400;
 
-    color: var(--azul-oscuro);
+    margin-bottom: 20px;
 }
 
-.bienvenida h1 span {
-    color: var(--verde);
-}
+.hero h1 strong {
 
-.descripcion {
-    max-width: 570px;
-
-    color: var(--texto-suave);
-    font-size: 1.2rem;
-    line-height: 1.7;
-
-    margin: 0;
-}
-
-
-/* =========================
-   ELEMENTO VISUAL
-========================= */
-
-.figura-bienvenida {
-    min-height: 310px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-}
-
-.circulo-icono {
-    width: 190px;
-    height: 190px;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: white;
-
-    box-shadow: 0 15px 35px rgba(36, 68, 86, 0.12);
-}
-
-.circulo-icono i {
-    font-size: 6rem;
     color: var(--azul);
-}
 
-.mensaje-figura {
-    background: white;
-
-    padding: 13px 22px;
-
-    border-radius: 8px;
-
-    display: flex;
-    flex-direction: column;
-
-    position: relative;
-    margin-top: -15px;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-.mensaje-figura strong {
-    color: var(--azul-oscuro);
-    font-size: 1rem;
-}
-
-.mensaje-figura span {
-    color: var(--texto-suave);
-    font-size: .9rem;
-    margin-top: 3px;
-}
-
-
-/* =========================
-   OPCIONES
-========================= */
-
-.opciones {
-    padding: 75px 0 85px;
-    background: var(--fondo);
-}
-
-.titulo-seccion {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.titulo-seccion p {
-    color: var(--texto-suave);
-    margin-bottom: 6px;
-    font-size: 1rem;
-}
-
-.titulo-seccion h2 {
-    margin: 0;
-
-    color: var(--azul-oscuro);
-
-    font-size: 2rem;
     font-weight: 700;
 }
 
+.hero p {
 
-/* =========================
-   TARJETAS
-========================= */
+    max-width: 590px;
 
-.opcion-card {
-    min-height: 280px;
+    color: var(--gris-texto);
 
-    padding: 30px;
+    font-size: 1.15rem;
 
-    border: 1px solid var(--borde);
-    border-radius: 12px;
-
-    display: flex;
-    flex-direction: column;
-
-    position: relative;
-
-    background: white;
-
-    transition: transform .2s ease, box-shadow .2s ease;
+    margin-bottom: 28px;
 }
 
-.opcion-card:hover {
-    transform: translateY(-5px);
 
-    box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
-}
+/* =========================================
+   PREGUNTA
+========================================= */
 
-.icono-opcion {
-    width: 62px;
-    height: 62px;
+.pregunta {
 
-    display: flex;
+    display: inline-flex;
+
     align-items: center;
-    justify-content: center;
 
-    border-radius: 10px;
+    gap: 12px;
 
-    margin-bottom: 25px;
+    background: var(--blanco);
+
+    border-left:
+        5px solid var(--verde);
+
+    padding:
+        13px 20px;
+
+    margin-bottom: 28px;
+
+    box-shadow: var(--sombra);
+
+    border-radius: 5px;
 }
 
-.icono-opcion i {
-    font-size: 1.9rem;
-}
+.pregunta i {
 
-.opcion-card h3 {
-    margin-bottom: 12px;
-
-    color: var(--azul-oscuro);
-
-    font-size: 1.55rem;
-}
-
-.opcion-card p {
-    max-width: 290px;
-
-    margin: 0;
-
-    color: var(--texto-suave);
-
-    font-size: 1.05rem;
-    line-height: 1.6;
-}
-
-.flecha {
-    margin-top: auto;
-    padding-top: 25px;
-
-    color: var(--texto-suave);
+    color: var(--verde);
 
     font-size: 1.3rem;
 }
 
+.pregunta span {
 
-/* =========================
-   COLORES DE CADA OPCIÓN
-========================= */
+    font-size: 1.2rem;
 
-.opcion-cuidate {
-    border-top: 5px solid var(--verde);
+    font-weight: 700;
+
+    color: var(--azul-oscuro);
 }
 
-.opcion-cuidate .icono-opcion {
-    background: var(--verde-claro);
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.btn-principal {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: fit-content;
+
+    gap: 18px;
+
+    padding:
+        13px 23px;
+
+    background: var(--azul);
+
+    color: var(--blanco);
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    transition: 0.25s;
+}
+
+.btn-principal:hover {
+
+    background:
+        var(--azul-oscuro);
+
+    color: var(--blanco);
+
+    transform:
+        translateY(-2px);
+}
+
+.btn-principal i {
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   DECORACIÓN HERO
+========================================= */
+
+.hero-decoracion {
+
+    width: 350px;
+
+    height: 350px;
+
+    position: relative;
+
+    margin-right: 50px;
+}
+
+.circulo-grande {
+
+    width: 280px;
+
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: var(--blanco);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 15px 40px
+        rgba(23, 50, 77, 0.08);
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 35px;
+}
+
+.circulo-grande i {
+
+    font-size: 7rem;
+
     color: var(--verde);
 }
 
-.opcion-informate {
-    border-top: 5px solid var(--azul);
+
+/* =========================================
+   DECORACIONES
+========================================= */
+
+.decoracion {
+
+    position: absolute;
+
+    width: 48px;
+
+    height: 48px;
+
+    background: var(--blanco);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow: var(--sombra);
+
+    font-size: 1.3rem;
 }
 
-.opcion-informate .icono-opcion {
+.decoracion-1 {
+
+    top: 15px;
+
+    right: 35px;
+
+    color: var(--verde);
+}
+
+.decoracion-2 {
+
+    bottom: 20px;
+
+    left: 10px;
+
+    color: var(--naranja);
+}
+
+.decoracion-3 {
+
+    bottom: 45px;
+
+    right: 10px;
+
+    color: var(--rosa);
+}
+
+
+/* =========================================
+   APARTADOS
+========================================= */
+
+.apartados {
+
+    padding:
+        80px 0;
+}
+
+.titulo-seccion {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 45px;
+}
+
+.subtitulo {
+
+    display: block;
+
+    color: var(--verde);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+.titulo-seccion h2 {
+
+    font-size: 2.3rem;
+
+    margin-bottom: 12px;
+}
+
+.titulo-seccion h2 span {
+
+    color: var(--azul);
+}
+
+.titulo-seccion p {
+
+    color: var(--gris-texto);
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.tarjeta {
+
+    height: 100%;
+
+    min-height: 295px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: var(--blanco);
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    position: relative;
+
+    color: var(--azul-oscuro);
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s,
+        border-color 0.25s;
+}
+
+.tarjeta:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow: var(--sombra);
+
+    border-color:
+        transparent;
+
+    color: var(--azul-oscuro);
+}
+
+
+/* =========================================
+   ICONOS DE TARJETAS
+========================================= */
+
+.icono {
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.7rem;
+
+    margin-bottom: 22px;
+}
+
+
+/* COLORES */
+
+.tarjeta-azul {
     background: var(--azul-claro);
     color: var(--azul);
 }
 
-.opcion-desestresate {
-    border-top: 5px solid var(--amarillo);
+.tarjeta-verde {
+    background: var(--verde-claro);
+    color: var(--verde);
 }
 
-.opcion-desestresate .icono-opcion {
-    background: var(--amarillo-claro);
-    color: var(--amarillo);
+.tarjeta-morado {
+    background: var(--morado-claro);
+    color: var(--morado);
+}
+
+.tarjeta-naranja {
+    background: var(--naranja-claro);
+    color: var(--naranja);
+}
+
+.tarjeta-rosa {
+    background: var(--rosa-claro);
+    color: var(--rosa);
+}
+
+.tarjeta-celeste {
+    background: var(--celeste-claro);
+    color: var(--celeste);
+}
+
+.tarjeta-rojo {
+    background: var(--rojo-claro);
+    color: var(--rojo);
+}
+
+.tarjeta-dorado {
+    background: var(--dorado-claro);
+    color: var(--dorado);
 }
 
 
-/* =========================
+/* =========================================
+   CONTENIDO TARJETA
+========================================= */
+
+.tarjeta-contenido {
+
+    flex: 1;
+}
+
+.tarjeta h3 {
+
+    font-size: 1.25rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+
+    color: var(--gris-texto);
+
+    font-size: 0.95rem;
+
+    margin: 0;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   FLECHA
+========================================= */
+
+.flecha {
+
+    position: absolute;
+
+    right: 22px;
+
+    bottom: 18px;
+
+    font-size: 1.1rem;
+
+    color: #9aa8af;
+
+    transition: 0.25s;
+}
+
+.tarjeta:hover .flecha {
+
+    color: var(--azul);
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================
+   TARJETA MI NEUROVIVE
+========================================= */
+
+.tarjeta-especial {
+
+    background:
+        #f5f8f3;
+}
+
+
+/* =========================================
+   SECCIÓN AYUDA
+========================================= */
+
+.seccion-ayuda {
+
+    padding:
+        30px 0 80px;
+}
+
+.ayuda-contenido {
+
+    background: var(--blanco);
+
+    border:
+        1px solid var(--borde);
+
+    border-radius: 14px;
+
+    padding:
+        35px 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(23, 50, 77, 0.04);
+}
+
+.ayuda-icono {
+
+    min-width: 75px;
+
+    height: 75px;
+
+    background:
+        var(--azul-claro);
+
+    color: var(--azul);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 2rem;
+}
+
+.ayuda-contenido h2 {
+
+    font-size: 1.7rem;
+
+    margin-bottom: 7px;
+}
+
+.ayuda-contenido p {
+
+    color: var(--gris-texto);
+
+    margin: 0;
+
+    max-width: 750px;
+}
+
+
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
-.footer-neuro {
-    padding: 28px 0;
+footer {
 
-    background: var(--azul-oscuro);
-    color: white;
+    background:
+        var(--azul-oscuro);
+
+    color:
+        var(--blanco);
+
+    padding:
+        30px 0;
 }
 
 .footer-contenido {
+
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
 
-    gap: 20px;
+    justify-content: space-between;
 }
 
 .footer-contenido strong {
-    font-size: 1.15rem;
+
+    font-size: 1.2rem;
 }
 
 .footer-contenido p {
-    margin: 5px 0 0;
 
-    color: #d6dfe3;
-    font-size: .9rem;
+    color: #b8c7d0;
+
+    margin:
+        5px 0 0;
+
+    font-size: 0.9rem;
 }
 
-.copyright {
-    margin: 0 !important;
+.footer-contenido > span {
+
+    color: #b8c7d0;
+
+    font-size: 0.9rem;
 }
 
 
-/* =========================
+/* =========================================
    TABLET
-========================= */
+========================================= */
 
 @media (max-width: 991px) {
 
-    .bienvenida {
-        padding: 60px 0;
+    .hero-decoracion {
+
+        width: 280px;
+
+        height: 280px;
+
+        margin-right: 0;
     }
 
-    .figura-bienvenida {
-        margin-top: 45px;
+    .circulo-grande {
+
+        width: 230px;
+
+        height: 230px;
     }
 
-    .nav-link {
-        margin-left: 0;
-        padding: 10px 0 !important;
+    .circulo-grande i {
+
+        font-size: 6rem;
     }
+
 }
 
 
-/* =========================
+/* =========================================
    CELULAR
-========================= */
+========================================= */
 
 @media (max-width: 767px) {
 
-    .navbar-neuro {
-        padding: 12px 0;
+    /* NAV */
+
+    .navbar-contenido {
+
+        padding-top: 14px;
+
+        padding-bottom: 14px;
     }
 
-    .bienvenida {
-        padding: 50px 0;
+    .navbar-neuro nav {
+
+        gap: 15px;
+    }
+
+    .navbar-neuro nav a {
+
+        font-size: 0.85rem;
+    }
+
+    .logo {
+
+        font-size: 1.25rem;
+    }
+
+    .logo img {
+
+        width: 42px;
+
+        height: 42px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        padding:
+            55px 0;
+    }
+
+    .hero-contenido {
+
+        min-height: auto;
+
+        flex-direction: column;
+
         text-align: center;
     }
 
-    .bienvenida h1 {
-        font-size: 2.35rem;
+    .hero-texto {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
     }
 
-    .descripcion {
-        font-size: 1.08rem;
+    .hero p {
+
+        font-size: 1rem;
     }
 
-    .figura-bienvenida {
-        min-height: 260px;
-        margin-top: 25px;
+    .pregunta {
+
+        width: 100%;
+
+        justify-content: center;
+
+        text-align: center;
     }
 
-    .circulo-icono {
-        width: 150px;
-        height: 150px;
+    .hero-decoracion {
+
+        margin-top: 40px;
+
+        width: 250px;
+
+        height: 250px;
     }
 
-    .circulo-icono i {
-        font-size: 4.7rem;
+    .circulo-grande {
+
+        width: 200px;
+
+        height: 200px;
+
+        top: 25px;
+
+        left: 25px;
     }
 
-    .opciones {
-        padding: 55px 0;
+    .circulo-grande i {
+
+        font-size: 5rem;
+    }
+
+
+    /* APARTADOS */
+
+    .apartados {
+
+        padding:
+            60px 0;
     }
 
     .titulo-seccion h2 {
-        font-size: 1.8rem;
+
+        font-size: 2rem;
     }
 
-    .opcion-card {
-        min-height: 250px;
-        padding: 25px;
+
+    /* TARJETAS */
+
+    .tarjeta {
+
+        min-height: 260px;
     }
+
+
+    /* AYUDA */
+
+    .ayuda-contenido {
+
+        padding: 28px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    /* FOOTER */
 
     .footer-contenido {
+
         flex-direction: column;
-        align-items: flex-start;
+
+        gap: 15px;
+
+        text-align: center;
     }
+
 }
 
 
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 480px) {
+
+    .navbar-neuro nav a:nth-child(2) {
+
+        display: none;
+    }
+
+    .hero h1 {
+
+        font-size: 2.2rem;
+    }
+
+    .titulo-seccion h2 {
+
+        font-size: 1.8rem;
+    }
+
+    .tarjeta {
+
+        padding: 22px;
+    }
+
+}
 
